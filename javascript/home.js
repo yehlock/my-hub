@@ -10,10 +10,17 @@ function updateTimer() {
 
     Time();
     if(time % 30 === 0){
-        setYouBike("1266","1")
-        setYouBike("1378","2")
+        setYouBike("1266","5",1) //捷運林口站
+        setYouBike("1378","1",1) //三井 outlet
+        setYouBike("1405","3",1) //林口行政中心
+        setYouBike("500216001","6",2) //捷運林口站
+        setYouBike("500216008","2",2) //三井 outlet
+        setYouBike("500216009","4",2) //林口行政中心
     }
-    setYouBikeTimer(time % 30, index)
+    for(let i = 1; i<=6; i++){
+        setYouBikeTimer(30 - time % 30, i)
+    }
+    
 }
 
 function setYouBikeTimer(second, index) 
@@ -21,8 +28,8 @@ function setYouBikeTimer(second, index)
     $("#ubikeUpTime" + index).text(`${second} 秒後更新`)
 }
 
-function setYouBike(id, index) {
-    YouBike.getYouBikeData(id, "", 0, 500)
+function setYouBike(id, index, version) {
+    YouBike.getYouBikeData(id, "", 0, 1000, version)
     .then((youBikeObject) => {
         $("#ubikeName" + index).text(youBikeObject.zhName);
         $("#ubikeAvlbe" + index).text(`可借 ${youBikeObject.available} `);

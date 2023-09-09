@@ -1,5 +1,5 @@
 h1 {
-    font-size: 200px; 
+    font-size: 100px; 
 }
 
 .ubikeName1 {
@@ -11,11 +11,30 @@ h1 {
 }
 
 .bike-detail1 {
-    font-size: 45px;
+    font-size: 26px;
 }
 
 .bike-detail2 {
-    font-size: 45px;
+    font-size: 26px;
+}
+
+.bike-detail3 {
+    font-size: 26px;
+}
+
+.bike-detail4 {
+    font-size: 26px;
+}
+
+.bike-detail5 {
+    font-size: 26px;
+}
+
+.bike-detail6 {
+    font-size: 26px;
+}
+#ubikeUpTime1, #ubikeUpTime2, #ubikeUpTime3, #ubikeUpTime4, #ubikeUpTime5, #ubikeUpTime6 {
+    font-size: 16px;
 }
 
 .grid-container {

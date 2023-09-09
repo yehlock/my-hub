@@ -1,0 +1,31 @@
+h1 {
+    font-size: 200px; 
+}
+
+.ubikeName1 {
+    font-size: 60px; 
+}
+
+.ubikeName2 {
+    font-size: 60px; 
+}
+
+.bike-detail1 {
+    font-size: 45px;
+}
+
+.bike-detail2 {
+    font-size: 45px;
+}
+
+.grid-container {
+    display: flex; /* Use flexbox */
+    justify-content: space-between; /* Distribute space between columns */
+}
+
+/* Style for each column */
+.grid-item {
+    flex: 1; /* Equal width for both columns */
+    padding: 20px; /* Add padding for spacing */
+    border: 1px solid #ddd; /* Add borders for visualization */
+}

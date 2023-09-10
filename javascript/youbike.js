@@ -15,13 +15,39 @@ function getYouBikeData(sId = "", sZhName = "", page = 0, size = 0, version = 1)
 }
 
 function setData(data) {
-    return new YouBike(data.sna, data.sbi, data.bemp);
+    const stationName = ["三井Outlet", "三井Outlet 2.0", "行政園區", "行政園區 2.0", "林口站", "林口站 2.0" ]
+    let name;
+    switch (data.sna) {
+        case "YouBike2.0_捷運林口站(1號出口)": // 捷運林口站
+            name = stationName[5]
+            break;
+        case "三井Outlet": //三井 Outlet
+            name = stationName[0]
+            break;
+        case "YouBike2.0_三井Outlet":
+            name = stationName[1]
+            break;
+        case "新北市林口行政園區":
+            name = stationName[2]
+            break;
+        case "YouBike2.0_新北市林口行政園區":
+            name = stationName[3]
+            break;
+        case "捷運林口站(1號出口)":
+            name = stationName[4]
+            break;
+        default:
+            name = data.sna
+            break;
+    }
+    return new YouBike(name, data.sbi, data.bemp, data.tot);
 }
 
-function YouBike(zhName, available, availableSpace) {
+function YouBike(zhName, available, availableSpace, total) {
     this.zhName = zhName;
-    this.available = available;
-    this.availableSpace = availableSpace;
+    this.available = String(available).padStart(2,'0');
+    this.availableSpace = String(availableSpace).padStart(2,'0');
+    this.total = total
 }
 
 function loadData(sId, sZhName, page, size, version) {

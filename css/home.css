@@ -1,50 +1,16 @@
-h1 {
-    font-size: 100px; 
+.uBikeName{
+    font-size: large;
 }
 
-.ubikeName1 {
-    font-size: 60px; 
+#clock{
+    font-family: 'GoogleSans-Regular', sans-serif;
 }
 
-.ubikeName2 {
-    font-size: 60px; 
+body {
+    font-family: 'GoogleSans-Regular','Noto Sans TC', sans-serif;
 }
 
-.bike-detail1 {
-    font-size: 26px;
-}
-
-.bike-detail2 {
-    font-size: 26px;
-}
-
-.bike-detail3 {
-    font-size: 26px;
-}
-
-.bike-detail4 {
-    font-size: 26px;
-}
-
-.bike-detail5 {
-    font-size: 26px;
-}
-
-.bike-detail6 {
-    font-size: 26px;
-}
-#ubikeUpTime1, #ubikeUpTime2, #ubikeUpTime3, #ubikeUpTime4, #ubikeUpTime5, #ubikeUpTime6 {
-    font-size: 16px;
-}
-
-.grid-container {
-    display: flex; /* Use flexbox */
-    justify-content: space-between; /* Distribute space between columns */
-}
-
-/* Style for each column */
-.grid-item {
-    flex: 1; /* Equal width for both columns */
-    padding: 20px; /* Add padding for spacing */
-    border: 1px solid #ddd; /* Add borders for visualization */
+@font-face {
+    font-family: GoogleSans-Regular;
+    src: url(GoogleSans-Regular.ttf);
 }

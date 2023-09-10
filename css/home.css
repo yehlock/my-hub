@@ -1,3 +1,9 @@
+body {
+    background-color: deepskyblue;
+    font-family: 'GoogleSans-Regular','Noto Sans TC', sans-serif;
+    transition: background-color 12s ease;
+}
+
 .uBikeName{
     font-size: large;
 }
@@ -6,8 +12,16 @@
     font-family: 'GoogleSans-Regular', sans-serif;
 }
 
-body {
-    font-family: 'GoogleSans-Regular','Noto Sans TC', sans-serif;
+#ubike1, #ubike2, #ubike3, #ubike4, #ubike5, #ubike6{
+    transition: background-color 3s ease;
+}
+
+#center-info{
+    overflow-y: auto; /* Add a scrollbar if content exceeds max-height */
+}
+
+#weather{
+    background-image: url("image/night-sky.jpg");
 }
 
 @font-face {

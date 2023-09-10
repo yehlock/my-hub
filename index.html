@@ -15,7 +15,7 @@
 <body>
 <!-- --------------------------------------------------------------------------------------------------------- -->
 <!-- 日期與時間 預計增加天氣 -->
-    <div class="container text-center">
+    <div class="container text-center" id="clock-container">
         <div class="row">
           <div class="col-2">
             <div class="" id="clock" style="font-size: 65px;"></div>
@@ -39,10 +39,43 @@
             </div>
             <div class="col-7"></div>
         </div>
-      </div>
+    </div>
+
+<!-- --------------------------------------------------------------------------------------------------------- -->
+<!-- Weather -->  
+    <div class="container text-center" id="center-info" style="height: 60vh;">
+        <div class="row" style="height: 100%;">
+            <div class="col-6" style="height: 100%;">
+                <div class="card" style="width: 18rem 50%; height:100%">
+                    <div class="card-body" id="weather">
+                        <div class="fs-2 pt-2 ps-3" id="wNow" style="position: absolute; top: 0; left: 0">Clear</div>
+                        <div class="container text-center position-absolute top-50 start-50 translate-middle" >
+                            <div class="row">
+                              <div class="col fs-1">
+                                25
+                              </div>
+                              <div class="col fs-1">
+                                23
+                              </div>
+                              <div class="col fs-1">
+                                23
+                              </div>
+                            </div>
+                          </div>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-6">
+                <div class=" border-0 rounded-4" height="300px" width="300px">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
 <!-- --------------------------------------------------------------------------------------------------------- -->
 <!-- Ubike -->   
-    <div class="container text-center fixed-bottom ">
+    <div class="container text-center fixed-bottom" id="ubike-container">
         <div class="row border border-4 border-warning-subtle rounded-3" >
             <div class="col-2 rounded-start-1 bg-success bg-gradient border-end border-black p-1" id="ubike1">
                 <div class="uBikeName" id="ubikeName1"></div class="uBikeName">

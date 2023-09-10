@@ -5,15 +5,26 @@ import * as YouBike from "./youbike.js"
 var startUp = true;
 setInterval(updateTimer, 1000);     // 1s
 // setInterval(busTime("NewTaipei","937","未來城社區",0), 10000);   // 10s 
+
 function updateTimer() { 
     let now = Date.now();
     let timespanSec = Math.floor(now / 1000);
 
     setClock();
     setDate();
+    setBackground();
     setYouBikeView(timespanSec, startUp, 120);
     startUp = false;
 }
+
+function setBackground() { 
+    const now = new Date();
+    if(now.getHours() < 6 || now.getHours() >18 ){
+        $('body').css('background-color', '#7272FF');
+    }else{
+        $('body').css('background-color', 'lightblue');
+    }
+ }
 
 function setYouBikeView(time, startUp, update) { 
     if(time % update === 0 || startUp){
